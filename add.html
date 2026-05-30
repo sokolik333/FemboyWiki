@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить персонажа - FemboyWiki</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">FemboyWiki</div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О сайте</a>
+            <a href="add.html" class="active">Добавить</a>
+        </nav>
+    </header>
+
+    <main class="profile-container">
+        <div class="profile-layout" style="flex-direction: column; gap: 20px; max-width: 600px; margin: 0 auto;">
+            <h1 class="profile-name" style="margin-bottom: 10px; text-align: center; width: 100%;">Предложить персонажа</h1>
+            
+            <form class="add-form" onsubmit="event.preventDefault(); alert('Спасибо! Персонаж отправлен на модерацию.');">
+                <div class="form-group">
+                    <label for="char-name">Имя персонажа:</label>
+                    <input type="text" id="char-name" required placeholder="Например: Астольфо">
+                </div>
+
+                <div class="form-group">
+                    <label for="char-anime">Из какого аниме:</label>
+                    <input type="text" id="char-anime" required placeholder="Например: Судьба/Апокриф">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="char-height">Рост (см):</label>
+                        <input type="number" id="char-height" required placeholder="164">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="char-weight">Вес (кг):</label>
+                        <input type="number" id="char-weight" required placeholder="56">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="char-role">Роль в аниме:</label>
+                    <input type="text" id="char-role" required placeholder="Например: Член ученического совета">
+                </div>
+
+                <div class="form-group">
+                    <label for="char-img">Ссылка на изображение:</label>
+                    <input type="url" id="char-img" placeholder="https://example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="char-desc">Описание персонажа:</label>
+                    <textarea id="char-desc" rows="5" required placeholder="Краткая биография и особенности персонажа..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Отправить в базу данных</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 FemboyWiki. Все персонажи вымышлены, все совпадения случайны.</p>
+    </footer>
+
+</body>
+</html>
